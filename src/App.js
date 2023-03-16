@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import Swap from "./components/Swap";
+import { Routes, Route } from "react-router-dom";
+import { useConnect, useAccount, useNetwork, useSwitchNetwork } from "wagmi";
+import { MetaMaskConnector } from "wagmi/connectors/metaMask";
+import { useState } from 'react';
 
 function App() {
-  return (
+    const { address, isConnected } = useAccount();
+    const { connect } = useConnect({
+      connector: new MetaMaskConnector(),
+    });
+    const { chain } = useNetwork()
+    const { chains, error, isLoading, pendingChainId, switchNetwork } =
+      useSwitchNetwork()
+
+    //const [network, setNetwork] = useState({id: '137', name: 'polygon', description: 'Polygon'})
+
+    //console.log(chain);
+    return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header connect={connect} isConnected={isConnected} address={address} chain={chain} switchNetwork={switchNetwork}/>
+      <div className="mainWindow">
+        <Routes>
+          <Route path="/" element={<Swap isConnected={isConnected} address={address} chain={chain} switchNetwork={switchNetwork}/>} />
+        </Routes>
+      </div>
+
     </div>
-  );
+    )
 }
 
 export default App;

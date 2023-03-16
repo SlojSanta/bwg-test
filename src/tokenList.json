@@ -1,0 +1,49 @@
+{
+    "chain_1": [
+        {
+            "symbol": "ETH",
+            "name": "Ethereum",
+            "decimals": 18,
+            "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+            "tags": [
+              "native",
+              "PEG:ETH"
+            ]
+        },
+        {
+            "symbol": "USDT",
+            "name": "Tether USD",
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "decimals": 6,
+            "logoURI": "https://tokens.1inch.io/0xdac17f958d2ee523a2206206994597c13d831ec7.png",
+            "tags": [
+              "tokens",
+              "PEG:USD"
+            ]
+        }
+    ],
+    "chain_137": [
+        {
+            "symbol": "MATIC",
+            "name": "MATIC",
+            "decimals": 18,
+            "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "logoURI": "https://tokens.1inch.io/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0.png",
+            "tags": [
+              "native"
+            ]
+        },
+        {
+            "symbol": "USDT",
+            "name": "Tether USD",
+            "decimals": 6,
+            "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "logoURI": "https://tokens.1inch.io/0xdac17f958d2ee523a2206206994597c13d831ec7.png",
+            "tags": [
+              "tokens",
+              "PEG:USD"
+            ]
+        }
+    ]
+}
